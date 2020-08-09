@@ -5,3 +5,9 @@ class SaleOrderExtensions(SaleOrder):
 
 class SaleOrderLineExtensions(SaleOrderLine):
     _inherit = "sale.order.line"
+
+    def action_select(self):
+        print('here')
+        m = self.env['ramzineh.productconfigurator.wizard']
+        
+        

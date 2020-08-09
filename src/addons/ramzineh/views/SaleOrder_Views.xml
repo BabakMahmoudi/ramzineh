@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="ramzineh_sale_order_view" model="ir.ui.view">
+            <field name="name">sale.order.form.inherit.sale.product.configurator</field>
+            <field name="model">sale.order</field>
+            <field name="inherit_id" ref="sale.view_order_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//tree/field[@name='product_template_id']" position="before">
+                    <button name="action_select" type="object" string="select"/>
+                </xpath>
+                <xpath expr="//page/field[@name='order_line']" position="before">
+                    <button name="%(productconfigurator_wizard_act_window)d" type="action" string="Add Product" icon="fa-plus-square" class="oe_stat_button"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

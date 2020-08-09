@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <!-- model.name inherit form view -->
+        <record id="ramzineh_product_view_form" model="ir.ui.view">
+            <field name="name">ramzineh.view.form</field>
+            <field name="model">product.template</field>
+            <field name="inherit_id" ref="product.product_template_form_view"/>
+            <field name="arch" type="xml">
+                <xpath expr="//page[@name='general_information']" position="before">
+                    <page string='Ramzineh'>
+                        <group>
+                            <group>
+                                <!-- <field name='hvac_spec_computed_des' string="computed des"/> -->
+                                <!-- <field name ='hvac_spec_manual_des' string="technical notes"/> -->
+                                <field name='rmz_product_type' string = 'Product Type'/>
+                                <field name='rmz_bobin_size' />
+                                <field name='rmz_number_of_rows' />
+                                <field name='rmz_width' />
+                                <field name='rmz_role_width' />
+
+                            </group>
+                            <group>
+                                <field name='rmz_paper_type' />
+                                <field name='rmz_glue_type' />
+                                <field name='rmz_number_of_rows' />
+                                <field name='rmz_length' />
+                                <field name='rmz_role_length' />
+                            </group>
+                        </group>
+                    </page>
+                </xpath>
+
+            </field>
+        </record>
+    </data>
+</odoo>

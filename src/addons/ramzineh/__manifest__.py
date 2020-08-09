@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "ramznieh",
+    'name': "ramzineh",
 
     'summary': """
         Ramzineh Extensions
@@ -20,16 +20,17 @@
     'version': '0.1',
 
     # any module necessary for this one to work correctly
-    'depends': ['base'],
+    'depends': ['base','sale'],
 
     # always loaded
     'data': [
         # 'security/ir.model.access.csv',
         # 'data/ir_sequence_data.xml',
-        # 'views/views.xml',
+        'wizards/ProductConfigurator_Wizard_Views.xml',
+        'views/Product_Views.xml',
+        'views/SaleOrder_Views.xml',
         # 'views/templates.xml',
         # 'views/action_views.xml',
-        # 'wizards/batch_update_views.xml',
         # 'views/branch_views.xml',
         # 'views/entry_views.xml',
         # 'views/file_views.xml',
