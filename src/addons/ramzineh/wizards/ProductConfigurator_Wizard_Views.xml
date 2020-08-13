@@ -22,16 +22,30 @@
                         <group>
                             <field name='rmz_paper_type' />
                             <field name='rmz_glue_type' />
-                            <field name='rmz_number_of_rows' />
+                            <field name='rmz_total_count' />
                             <field name='rmz_length' />
                             <field name='rmz_role_length' />
+                            <field name='rmz_printed_label' />
                         </group>
                     </group>
+                    <div>
+                        <h3>
+                            <field name="product_name"/>
+                        </h3>
+                        <button name="action_create" type="object" string="Create Product" class="oe_highlight" />
+                    </div>
+                    <field name="product_ids" widget="one2many">
+                        <tree string="Variants" editable="bottom">
+                            <field name="name"/>
+                        </tree>
+                    </field>
+
 
                 </sheet>
                 <footer>
                     <button name="action_add_product" type="object" string="Add Product" class="oe_highlight" />
                     <button special="cancel" string="Cancel" />
+
                 </footer>
             </form>
         </field>

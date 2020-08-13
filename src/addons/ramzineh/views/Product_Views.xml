@@ -24,7 +24,7 @@
                             <group>
                                 <field name='rmz_paper_type' />
                                 <field name='rmz_glue_type' />
-                                <field name='rmz_number_of_rows' />
+                                <field name='rmz_total_count' />
                                 <field name='rmz_length' />
                                 <field name='rmz_role_length' />
                             </group>
