@@ -1,1 +1,1 @@
-from . import ProductConfigurator_Wizard
+from . import ProductConfiguratorWizard

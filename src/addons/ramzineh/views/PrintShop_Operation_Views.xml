@@ -1,0 +1,75 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <data noupdate="0">
+        <!-- Add you code here -->
+        <record model="ir.ui.view" id="ramzineh_ps_operation_list">
+            <field name="name">PrintShop Operations </field>
+            <field name="model">ramzineh.ps.operation</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+        <!-- Form View -->
+        <record model="ir.ui.view" id="ramzineh_ps_operation_form">
+            <field name="name">PrintShop Opertaion</field>
+            <field name="model">ramzineh.ps.operation</field>
+            <field name="arch" type="xml">
+                <form>
+                    <header>
+                        <button name="action_execute" type="object" string="Execute" />
+                        <!-- <button name="action_draft" type="object" string="Reset to draft" states="confirmed,done"/>
+            <button name="action_confirm" type="object" string="Confirm" states="draft" class="oe_highlight"/>
+            <button name="action_done" type="object" string="Mark as done" states="confirmed" class="oe_highlight"/>
+            <button name="action_cancel" type="object" string="Cancel Project" states="confirmed,done,draft" class="oe_highlight"/>
+            <field name="state" widget="statusbar"/> -->
+
+
+                    </header>
+                    <sheet>
+                        <div class="oe_button_box" name="button_box">
+                        </div>
+                        <div class="oe_title">
+                            <h1>
+                                <field name="name" placeholder="Name" nolabel="1"/>
+                            </h1>
+                        </div>
+                        <group>
+                            <group>
+                                <field name="slit_input_product_id"/>
+                                <field name="slit_widths"/>
+                                <!-- <field name="percent_complete" widget="progressbar" options="{'max_value':100, 'style':'width:150px;'}" /> -->
+                            </group>
+                            <group>
+                                <!-- <field name="code" readonly="1"/>
+                                <field name="code" invisible="1"/>
+                                <field name="deliverable_product_id"/>
+                                <field name="bom_id"/> -->
+                            </group>
+                        </group>
+                    </sheet>
+                    <!-- <div class="oe_chatter">
+            <field name="message_follower_ids" widget="mail_followers"/>
+            <field name="activity_ids" widget="mail_activity"/>
+            <field name="message_ids" widget="mail_thread"/>
+          </div> -->
+                </form>
+            </field>
+        </record>
+        <!-- actions opening views on models -->
+
+        <record model="ir.actions.act_window" id="ramzineh_ps_operation_action_window">
+            <field name="name">Operations</field>
+            <field name="res_model">ramzineh.ps.operation</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem name="Print Shop" id="ramzineh_printshop_root"/>
+
+        <menuitem name="Operations" id="ramzineh_ps_operations_menu" parent="ramzineh_printshop_root"/>
+        <menuitem name="View" id="ramzineh_ps_operations_list" parent="ramzineh_ps_operations_menu" action="ramzineh_ps_operation_action_window"/>
+
+
+    </data>
+</odoo>

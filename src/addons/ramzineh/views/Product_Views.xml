@@ -12,24 +12,26 @@
                     <page string='Ramzineh'>
                         <group>
                             <group>
-                                <!-- <field name='hvac_spec_computed_des' string="computed des"/> -->
-                                <!-- <field name ='hvac_spec_manual_des' string="technical notes"/> -->
                                 <field name='rmz_product_type' string = 'Product Type'/>
-                                <field name='rmz_bobin_size' />
-                                <field name='rmz_number_of_rows' />
-                                <field name='rmz_width' />
+                                <field name='rmz_paper_type' />
+                                <field name='rmz_glue_type' />
                                 <field name='rmz_role_width' />
+                                <field name='rmz_role_length' />
 
                             </group>
                             <group>
-                                <field name='rmz_paper_type' />
-                                <field name='rmz_glue_type' />
-                                <field name='rmz_total_count' />
+                                <field name='rmz_bobin_size' />
+                                <field name='rmz_width' />
                                 <field name='rmz_length' />
-                                <field name='rmz_role_length' />
+                                <field name='rmz_number_of_rows' />
+                                <field name='rmz_total_count' />
+                                <field name='rmz_printed_text' />
                             </group>
                         </group>
                     </page>
+                </xpath>
+                <xpath expr="//field[@name='uom_po_id']" position="after">
+                    <field name="rmz_sale_uom_id" groups="uom.group_uom" options="{'no_create': True}"/>
                 </xpath>
 
             </field>

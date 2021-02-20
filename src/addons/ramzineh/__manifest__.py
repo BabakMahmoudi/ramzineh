@@ -24,11 +24,12 @@
 
     # always loaded
     'data': [
-        # 'security/ir.model.access.csv',
+        'security/ir.model.access.csv',
         # 'data/ir_sequence_data.xml',
-        'wizards/ProductConfigurator_Wizard_Views.xml',
+        'wizards/ProductConfiguratorWizard_Views.xml',
         'views/Product_Views.xml',
         'views/SaleOrder_Views.xml',
+        'views/PrintShop_Operation_Views.xml',
         # 'views/templates.xml',
         # 'views/action_views.xml',
         # 'views/branch_views.xml',
